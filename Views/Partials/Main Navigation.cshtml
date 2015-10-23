@@ -9,11 +9,51 @@
 
 @{ var selection = CurrentPage.Site().Children.Where("Visible"); }
 
-<ul>
-    @foreach (var item in selection)
-    {
-        <li class="@(item.IsAncestorOrSelf(CurrentPage) ? "current" : null)">
-            <a href="@item.Url">@item.Name</a>
+<nav class="main-nav">
+    <ul>
+        <li><a href="/"><img src="~/App/img/tappi-safe-logo.png" class="logo" /></a></li>
+        <li>
+            <a href="">What's TAPPISAFE? <div class="nug"></div></a>
+            <ul class="submenu">
+                <div class="container-fluid">
+                    <div class="nav-col featured-nav">
+                        <li>
+                            <a href=""><img src="~/App/img/card-img.jpg" width="180" /></a><br />
+                            <a href="">AT A QUICK GLANCE</a>
+                        </li>
+                    </div>
+                    <div class="nav-col">
+                        <li><a href="">About TAPPISAFE</a></li>
+                        <li><a href="">TAPPISAFE Basic Orientation</a></li>
+                        <li><a href="">Site-Specific Orientation</a></li>
+                        <li><a href="">Gate-Check Application</a></li>
+                    </div>
+                    <div class="nav-col">
+                        <li><a href="">Truck Driver Orientation</a></li>
+                        <li><a href="">Employee Orientation</a></li>
+                        <li><a href="">Process Safety Management</a></li>
+                    </div>
+                </div>
+            </ul>
         </li>
-    }
-</ul>
+        <li><a href="">For Mills</a></li>
+        <li><a href="">For Contractors</a></li>
+        <li><a href="">Get Started</a></li>
+        <li>
+            <a href=""><i class="material-icons">search</i></a>
+            @*<ul class="submenu search-bar">
+                    <div class="container-fluid">
+                        <h4>Search TAPPISAFE</h4>
+                        <p>Search for courses and content. Just type in a course code, or whatever is on your mind!</p>
+                        <form>
+                            <div class="form-group">
+                                <label class="sr-only" for="search">Search</label>
+                                <input type="search" class="form-control" id="search" placeholder="Start typing..." />
+                            </div>
+                        </form>
+                      </div>
+                </ul>*@
+        </li>
+        <li><a href="" style="background: yellow;"><span style="color: #434444;">LOG IN</span></a></li>
+    </ul>
+</nav>

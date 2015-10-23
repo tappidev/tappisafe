@@ -7,84 +7,20 @@
 Navigation*@
 
 <div class="container">
-    <header>
-        <div class="shape"></div>
-        <div class="shape2"></div>
-        
-        <nav class="main-nav">
-            <ul>
-                <li><img src="~/App/img/tappi-safe-logo.png" class="logo" /></li>
-                <li><a href="">What's TAPPISAFE?</a></li>
-                <li><a href="">For Mills</a></li>
-                <li><a href="">For Contractors</a></li>
-                <li><a href="">Get Started</a></li>
-                <li><a href=""><i class="material-icons">search</i></a></li>
-                <li><a href="" style="background: yellow;"><span style="color: #434444;">LOG IN</span></a></li>
-            </ul>
-        </nav>
-    </header>
+    @Html.Partial("Header")
+    @Html.Partial("Main Navigation")
 </div>
 
 
 
 
 <div class="container-fluid">
-    <div class="row">
-        <article class="col-md-4">
-            <div class="card card-with-image">
-                <div class="card-inner">
-                    <div class="card-title-image">
-                        <img src="~/App/img/card-img.jpg" alt="" />
-                    </div>
-                    <div class="card-text">
-                        <p>When the largest mills make the switch to TAPPISAFE for knowledge, it's time to listen.</p>
-                    </div>
-                        <div class="card-action">
-                            <a href="">Get Started with TAPPISAFE <i class="material-icons">launch</i></a>
-                        </div>
-                </div>
-            </div>
-        </article>
-        <article class="col-md-4">
-            <div class="card card-with-image">
-                <div class="card-inner">
-                    <div class="card-title-image">
-                        <img src="~/App/img/card-img.jpg" alt="" />
-                    </div>
-                    <div class="card-text">
-                        <p>When the largest mills make the switch to TAPPISAFE for knowledge, it's time to listen.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="">Get Started with TAPPISAFE <i class="material-icons">launch</i></a>
-                    </div>
-                </div>
-            </div>
-        </article>
-        <article class="col-md-4">
-            <div class="card card-with-image">
-                <div class="card-inner">
-                    <div class="card-title-image">
-                        <img src="~/App/img/card-img.jpg" alt="" />
-                    </div>
-                    <div class="card-text">
-                        <p>When the largest mills make the switch to TAPPISAFE for knowledge, it's time to listen.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="">Get Started with TAPPISAFE <i class="material-icons">launch</i></a>
-                    </div>
-                </div>
-            </div>
-        </article>
-    </div>
+    @Html.Partial("Slider")
+
+    @Html.Partial("News")
 
     <div class="row">
-        <article class="news-feed">
-            <span>What's New?</span> | We have just welcome Mill 1, Mill 2, Mill 3, and Mill 4
-        </article>
-    </div>
-
-    <div class="row">
-        <div class="col-md-8 tappisafe-intro">
+        <div class="tappisafe-intro col-md-8">
             <div class="col-md-4">
                 <img src="~/App/img/intro-vid.jpg" style="width: 100%;" />
             </div>
@@ -92,15 +28,15 @@ Navigation*@
                 <p>TAPPISAFE was developed by safety experts from some of the leading manufacturing, supplier and contractor companies in our Industry. These pulp and paper safety leaders created and vetted the TAPPISAFE modules and have incorporated best practices from mills across the country. TAPPISAFE is an OSHA awareness level safety orientation program developed specifically for pulp and paper mill contractors, suppliers and employees.</p>
             </div>
             <div class="clearfix"></div>
-                <div class="col-md-4">
+                <div class="col-md-4 intro-feature">
                     <i class="material-icons">import_export</i>
                     <h6>Implementing TAPPISAFE in your mill is easy and quick.</h6>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 intro-feature">
                     <i class="material-icons">refresh</i>
                     <h6>Constant Updating of Test Materials</h6>
                 </div>
-            <div class="col-md-4">
+            <div class="col-md-4 intro-feature">
                 <i class="material-icons">attach_money</i>
                 <h6>Savings Opportunities in Time, Personnel & Budget</h6>
             </div>
@@ -113,7 +49,7 @@ Navigation*@
                     </div>
                     <div class="card-text">
                         <h4>Weyhauser Mill Improves Safety While Reducing Costs</h4>
-                        <p>When the largest mills make the switch to TAPPISAFE for knowledge, it's time to listen. Don't fall behind the curve.</p>
+                        <p>"TAPPISAFE® is a HUGE help" for The Weyerhaeuser Columbus Cellulose Fibers plant in South Lowndes County, MS</p>
                     </div>
                     <div class="card-action">
                         <a href="">Case Study <i class="material-icons">launch</i></a>
@@ -122,36 +58,6 @@ Navigation*@
             </div>
         </div>
     </div>
-
-
-
-    <div class="row sponsors">
-        <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#mills" aria-controls="mills" role="tab" data-toggle="tab"><h5>Participating Mills</h5></a></li>
-            <li role="presentation" class="#supporters"><a href="#supporters" aria-controls="supporters" role="tab" data-toggle="tab"><h5>TAPPISAFE Supporters</h5></a></li>
-        </ul>
-
-        <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="mills">
-                <img src="~/App/img/valmet.jpg" width="200" />
-                <img src="~/App/img/valmet.jpg" width="200" />
-                <img src="~/App/img/valmet.jpg" width="200" />
-                <img src="~/App/img/valmet.jpg" width="200" />
-            </div>
-            <div role="tabpanel" class="tab-pane active" id="supporters"></div>
-        </div>
-    </div>
 </div> @*container*@
 
-<div class="container footer">
-    <div class="row quick-info">
-        <div class="col-md-4 support-link"><a href="#">Become a TAPPISAFE Supporter</a></div>
-        <div class="col-md-8 quick-contact"><span>Developed For and By the Indsutry</span> // Call 770-777-7777 or visit TAPPISAFE.org for more info.</div>
-    </div>
-    <div class="row copyright">
-        <h5>2015 TAPPI - The leading association for the worldwide pulp, paper, packaging and converting industries.</h5>
-        <p><a href="#">TAPPI Antitrust Policy</a> <a href="#">TAPPI Antitrust Policy</a> <a href="#">TAPPI Antitrust Policy</a></p>
-    </div>
-</div>
-
-@*footer*@
+@Html.Partial("Footer")
